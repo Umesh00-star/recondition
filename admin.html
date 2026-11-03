@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f766e"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>Manage | Recondition House</title></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="index.html"><i>RH</i><span>Recondition House</span></a><nav><a href="index.html">Vehicles</a><a class="on" href="admin.html">Manage</a></nav></div></header>
+<main class="wrap" style="padding-top:28px;padding-bottom:40px">
+<section class="panel narrow" id="login"><h2>Connect to GitHub</h2><p>Paste your fine-grained access token (Contents: read and write). It stays in this browser only.</p>
+<label for="tok">Access token</label><input id="tok" type="password" autocomplete="off" placeholder="github_pat_…"><div style="margin-top:14px"><button class="btn" id="connect">Connect</button></div><div class="msg" id="lmsg"></div></section>
+<div id="app" class="split" hidden>
+<section class="panel"><h2>Add a vehicle</h2><p>It shows on the Vehicles page right after saving.</p>
+<form id="f" class="form" novalidate>
+<div class="full"><label for="name">Vehicle name</label><input id="name" required placeholder="Toyota Hilux"></div>
+<div><label for="number">Vehicle number</label><input id="number" required placeholder="BA 12 PA 3456"></div>
+<div><label for="model">Model</label><input id="model" required placeholder="2019 Revo"></div>
+<div><label for="color">Colour</label><input id="color" required placeholder="Pearl white"></div>
+<div><label for="price">Price</label><input id="price" type="number" min="0" step="any" required placeholder="3500000"></div>
+<div class="full"><label>Photos (up to 5)</label><label class="drop" for="photos"><b>Tap to add photos</b><span>JPG or PNG, resized automatically</span><input id="photos" type="file" accept="image/*" multiple hidden></label><div class="prev" id="prev"></div></div>
+<div class="full"><button class="btn wide" id="save" type="submit">Save vehicle</button><div class="msg" id="msg" role="status"></div></div>
+</form></section>
+<section class="panel"><h2>Saved vehicles</h2><p>Remove a vehicle if it is no longer needed.</p><div id="rows"></div><button class="btn ghost" id="logout" style="margin-top:16px">Disconnect</button></section>
+</div></main>
+<script src="js/config.js"></script><script src="js/github.js"></script><script src="js/util.js"></script><script src="js/admin.js"></script></body></html>
