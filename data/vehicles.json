@@ -1,16 +1,1 @@
-{
-  "vehicles": [
-    {
-      "id": "mw0g6s8b",
-      "name": "Fz v2",
-      "number": "8764",
-      "model": "2019",
-      "color": "Red",
-      "price": 155,
-      "images": [
-        "images/mw0g6s8b-1-fz-v2.jpg"
-      ],
-      "createdAt": 1793695838699
-    }
-  ]
-}
+{"vehicles":[]}
