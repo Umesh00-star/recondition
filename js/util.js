@@ -43,7 +43,8 @@
       throw new Error(file.name + " is too large to process. Try a smaller photo.");
     }
   }
-  const api = { esc, money, slug, filterSort, compress };
+  const NOPHOTO = "data:image/svg+xml;utf8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="#cbd5dc"/><text x="200" y="155" text-anchor="middle" font-family="sans-serif" fill="#5d6b78">No photo</text></svg>');
+  const api = { NOPHOTO, esc, money, slug, filterSort, compress };
   root.U = api;
   if (typeof module !== "undefined") module.exports = api;
 })(typeof window !== "undefined" ? window : globalThis);
