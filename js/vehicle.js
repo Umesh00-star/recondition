@@ -11,7 +11,7 @@
     document.title = v.name + " | Recondition House";
     const imgs = (v.images || []).map(GH.imageUrl);
     if (!imgs.length) imgs.push(U.NOPHOTO);
-    let n = 0;
+    U.guard($("view")); let n = 0;
     $("view").innerHTML = `<div class="vgrid">
       <section><div class="stage" id="stage"><img id="big" alt="${U.esc(v.name)}">
         ${imgs.length > 1 ? `<button class="nv prev" aria-label="Previous photo">‹</button><button class="nv next" aria-label="Next photo">›</button><span class="cnt" id="cnt"></span>` : ""}</div>
@@ -20,7 +20,7 @@
         <div class="spec"><div>Vehicle number<b>${U.esc(v.number)}</b></div><div>Model<b>${U.esc(v.model)}</b></div><div>Colour<b>${U.esc(v.color)}</b></div><div>Photos<b>${v.images ? v.images.length : 0}</b></div></div></aside></div>`;
     const go = (i) => {
       n = (i + imgs.length) % imgs.length;
-      $("big").src = imgs[n]; $("stage").style.setProperty("--bg-img", `url("${imgs[n]}")`);
+      $("big").dataset.r = "0"; $("big").src = imgs[n]; $("stage").style.setProperty("--bg-img", `url("${imgs[n]}")`);
       if ($("cnt")) $("cnt").textContent = (n + 1) + " / " + imgs.length;
       document.querySelectorAll(".vt img").forEach((t, k) => t.classList.toggle("on", k === n));
     };

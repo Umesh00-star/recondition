@@ -13,6 +13,7 @@
     $("count").textContent = all.length + (all.length === 1 ? " vehicle" : " vehicles") + " available";
   }
   async function init() {
+    U.guard($("grid"));
     ["q", "sort"].forEach((id) => $(id).addEventListener("input", render));
     $("vg").onclick = () => { view = "grid"; $("vg").classList.add("on"); $("vl").classList.remove("on"); render(); };
     $("vl").onclick = () => { view = "list"; $("vl").classList.add("on"); $("vg").classList.remove("on"); render(); };

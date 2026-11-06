@@ -2,6 +2,9 @@
   const C = () => root.APP_CONFIG;
   const API = "https://api.github.com";
   const store = () => root.localStorage;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  const delay = () => (C().retryMs ?? 800);
+  async function why(res) { try { return (await res.json()).message || ""; } catch (_) { return ""; } }
 
   function repo() {
     let { owner, repo, branch } = C();
@@ -31,9 +34,9 @@
     return { data: JSON.parse(unb64(j.content)), sha: j.sha };
   }
 
-  // Public read: GitHub API first, then the published JSON file as a fallback.
-  async function readVehicles() {
-    try { return (await getFile(C().dataPath, false)).data.vehicles || []; }
+  // Public pages read without a token; the admin page passes auth=true (no rate limit).
+  async function readVehicles(auth) {
+    try { return (await getFile(C().dataPath, !!auth)).data.vehicles || []; }
     catch (e) {
       const res = await fetch(C().dataPath + "?t=" + Date.now(), { cache: "no-store" });
       if (!res.ok) throw e;
@@ -51,19 +54,34 @@
 
   // Read-modify-write with automatic retry if someone else saved first.
   async function saveVehicles(mutate, message) {
-    for (let i = 0; i < 4; i++) {
+    let last = 0, msg = "";
+    for (let i = 0; i < 5; i++) {
+      if (i) await wait(delay() * i);
       const { data, sha } = await getFile(C().dataPath, true);
       const next = { vehicles: mutate(data.vehicles || []) };
       const res = await put(C().dataPath, { message, content: b64(JSON.stringify(next, null, 2)), ...(sha ? { sha } : {}) });
       if (res.ok) return next.vehicles;
-      if (res.status !== 409 && res.status !== 422) throw new Error("Save failed (" + res.status + "). Check your token permissions.");
+      last = res.status; msg = await why(res);
+      if (res.status !== 409 && res.status !== 422) break;
     }
-    throw new Error("Save conflict. Please try again.");
+    throw new Error(`Save failed (${last}${msg ? ": " + msg : ""}). Check your token permissions.`);
   }
 
+  // GitHub can answer 409 when commits arrive back-to-back, so retry with a short pause.
   async function uploadImage(path, base64) {
-    const res = await put(path, { message: "Add photo " + path, content: base64 });
-    if (!res.ok) throw new Error("Photo upload failed (" + res.status + ")");
+    if (!base64) throw new Error("Photo data was empty, nothing was uploaded.");
+    let last = 0, msg = "";
+    for (let i = 0; i < 5; i++) {
+      if (i) await wait(delay() * i);
+      let res;
+      try { res = await put(path, { message: "Add photo " + path, content: base64 }); }
+      catch (_) { last = 0; msg = "network error"; continue; }
+      if (res.ok) return;
+      last = res.status; msg = await why(res);
+      if (res.status === 422 && /sha/i.test(msg)) return; // file already exists
+      if (![409, 422, 500, 502, 503].includes(res.status)) break;
+    }
+    throw new Error(`Photo upload failed (${last}${msg ? ": " + msg : ""})`);
   }
   async function deleteImage(path) {
     try {
@@ -79,7 +97,7 @@
     const res = await fetch(`${API}/repos/${r.owner}/${r.repo}`, { headers: headers(true) });
     if (!res.ok) throw new Error("Token or repository not valid (" + res.status + ")");
     const j = await res.json();
-    if (!j.permissions || !j.permissions.push) throw new Error("This token cannot write to the repository.");
+    if (j.permissions && !j.permissions.push) throw new Error("This token cannot write to the repository.");
     return true;
   }
 
