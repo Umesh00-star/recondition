@@ -11,18 +11,6 @@
         "images/mwelairm-1-fz-v2.jpg"
       ],
       "createdAt": 1794550937056
-    },
-    {
-      "id": "mwegjhho",
-      "name": "Fz v2",
-      "number": "8764",
-      "model": "2019",
-      "color": "Red",
-      "price": 160,
-      "images": [
-        "images/mwegjhho-1-fz-v2.jpg"
-      ],
-      "createdAt": 1794542957265
     }
   ]
 }
