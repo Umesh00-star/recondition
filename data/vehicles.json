@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwelairm",
+      "name": "Fz v2",
+      "number": "2626",
+      "model": "2014",
+      "color": "Red",
+      "price": 120,
+      "images": [
+        "images/mwelairm-1-fz-v2.jpg"
+      ],
+      "createdAt": 1794550937056
+    },
+    {
       "id": "mwegjhho",
       "name": "Fz v2",
       "number": "8764",
