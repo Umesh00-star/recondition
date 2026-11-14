@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1fr2n",
+      "name": "Pulsar 150",
+      "number": "4765",
+      "model": "2019",
+      "color": "Black",
+      "price": 100,
+      "images": [
+        "images/mwg1fr2n-1-pulsar-150.jpg"
+      ],
+      "createdAt": 1794638521133
+    },
+    {
       "id": "mwg1f1sy",
       "name": "Pulsar 150",
       "number": "281",
