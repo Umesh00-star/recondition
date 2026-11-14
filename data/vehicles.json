@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1qd05",
+      "name": "Activa 125",
+      "number": "4542",
+      "model": "2019",
+      "color": "Red",
+      "price": 100,
+      "images": [
+        "images/mwg1qd05-1-activa-125.jpg"
+      ],
+      "createdAt": 1794639016286
+    },
+    {
       "id": "mwg1po52",
       "name": "Honda grazia",
       "number": "7460",
