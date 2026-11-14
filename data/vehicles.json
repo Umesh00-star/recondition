@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1v67r",
+      "name": "Discover",
+      "number": "1618",
+      "model": "2014",
+      "color": "Red black",
+      "price": 10,
+      "images": [
+        "images/mwg1v67r-1-discover.jpg"
+      ],
+      "createdAt": 1794639240602
+    },
+    {
       "id": "mwg1uhix",
       "name": "Discover",
       "number": "6654",
