@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1mdgg",
+      "name": "Honda dio",
+      "number": "9325",
+      "model": "2019",
+      "color": "Orange",
+      "price": 100,
+      "images": [
+        "images/mwg1mdgg-1-honda-dio.jpg"
+      ],
+      "createdAt": 1794638830005
+    },
+    {
       "id": "mwg1lpod",
       "name": "Ntroq 125",
       "number": "5517",
