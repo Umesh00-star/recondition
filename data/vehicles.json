@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1jrwg",
+      "name": "Super",
+      "number": "9688",
+      "model": "2019",
+      "color": "Black",
+      "price": 100,
+      "images": [
+        "images/mwg1jrwg-1-super.jpg"
+      ],
+      "createdAt": 1794638709636
+    },
+    {
       "id": "mwg1ggws",
       "name": "Pulsar 150",
       "number": "4934",
