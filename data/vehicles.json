@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1qywi",
+      "name": "Aviator",
+      "number": "31",
+      "model": "2014",
+      "color": "Red",
+      "price": 10,
+      "images": [
+        "images/mwg1qywi-1-aviator.jpg"
+      ],
+      "createdAt": 1794639044181
+    },
+    {
       "id": "mwg1qd05",
       "name": "Activa 125",
       "number": "4542",
