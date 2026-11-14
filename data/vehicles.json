@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1l3a2",
+      "name": "Pleasure",
+      "number": "7045",
+      "model": "2019",
+      "color": "Grey",
+      "price": 100,
+      "images": [
+        "images/mwg1l3a2-1-pleasure.jpg"
+      ],
+      "createdAt": 1794638770342
+    },
+    {
       "id": "mwg1kgot",
       "name": "Fz v3",
       "number": "6914",
