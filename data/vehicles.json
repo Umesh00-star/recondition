@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1kgot",
+      "name": "Fz v3",
+      "number": "6914",
+      "model": "2019",
+      "color": "Navy blue",
+      "price": 100,
+      "images": [
+        "images/mwg1kgot-1-fz-v3.jpg"
+      ],
+      "createdAt": 1794638741233
+    },
+    {
       "id": "mwg1jrwg",
       "name": "Super",
       "number": "9688",
