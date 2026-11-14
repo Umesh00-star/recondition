@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1sblp",
+      "name": "Shine",
+      "number": "6167",
+      "model": "2014",
+      "color": "Black",
+      "price": 10,
+      "images": [
+        "images/mwg1sblp-1-shine.jpg"
+      ],
+      "createdAt": 1794639107403
+    },
+    {
       "id": "mwg1rkdx",
       "name": "Sp shine",
       "number": "9703",
