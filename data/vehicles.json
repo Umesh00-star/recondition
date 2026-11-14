@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwg1po52",
+      "name": "Honda grazia",
+      "number": "7460",
+      "model": "2022",
+      "color": "Blue",
+      "price": 100,
+      "images": [
+        "images/mwg1po52-1-honda-grazia.jpg"
+      ],
+      "createdAt": 1794638984617
+    },
+    {
       "id": "mwg1oq8j",
       "name": "Honda grazia",
       "number": "4675",
