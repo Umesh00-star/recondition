@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwn7zuoo",
+      "name": "Xpulse",
+      "number": "5078",
+      "model": "2020",
+      "color": "White",
+      "price": 180,
+      "images": [
+        "images/mwn7zuoo-1-xpulse.jpg"
+      ],
+      "createdAt": 1795072800121
+    },
+    {
       "id": "mwg1v67r",
       "name": "Discover",
       "number": "1618",
