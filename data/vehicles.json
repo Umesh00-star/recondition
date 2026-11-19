@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwn80se1",
+      "name": "Xpulse 200",
+      "number": "2656",
+      "model": "2020",
+      "color": "Black",
+      "price": 180,
+      "images": [
+        "images/mwn80se1-1-xpulse-200.jpg"
+      ],
+      "createdAt": 1795072843588
+    },
+    {
       "id": "mwn7zuoo",
       "name": "Xpulse",
       "number": "5078",
