@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mwn81oal",
+      "name": "Raider",
+      "number": "6070",
+      "model": "2019",
+      "color": "Black",
+      "price": 165,
+      "images": [
+        "images/mwn81oal-1-raider.jpg"
+      ],
+      "createdAt": 1795072884999
+    },
+    {
       "id": "mwn80se1",
       "name": "Xpulse 200",
       "number": "2656",
