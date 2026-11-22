@@ -49,18 +49,6 @@
       "createdAt": 1794639240602
     },
     {
-      "id": "mwg1uhix",
-      "name": "Discover",
-      "number": "6654",
-      "model": "2019",
-      "color": "Red black",
-      "price": 100,
-      "images": [
-        "images/mwg1uhix-1-discover.jpg"
-      ],
-      "createdAt": 1794639208761
-    },
-    {
       "id": "mwg1trr6",
       "name": "Unicorn",
       "number": "4768",
