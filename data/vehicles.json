@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mx0688ov",
+      "name": "Grazia",
+      "number": "5637",
+      "model": "2019",
+      "color": "Blue",
+      "price": 140,
+      "images": [
+        "images/mx0688ov-1-grazia.jpg"
+      ],
+      "createdAt": 1795855895501
+    },
+    {
       "id": "mx063202",
       "name": "Ntroq",
       "number": "5517",
