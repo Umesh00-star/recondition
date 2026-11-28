@@ -1,6 +1,18 @@
 {
   "vehicles": [
     {
+      "id": "mx06agwd",
+      "name": "Ray z",
+      "number": "3281",
+      "model": "16",
+      "color": "Red",
+      "price": 100,
+      "images": [
+        "images/mx06agwd-1-ray-z.jpg"
+      ],
+      "createdAt": 1795855996821
+    },
+    {
       "id": "mx0688ov",
       "name": "Grazia",
       "number": "5637",
